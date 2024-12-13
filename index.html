@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theo Smith | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHq6ZG8+qB7e76E1hJ4JZBfZHgSA6r7kaULf3A3m1yvW8BrJb0KzGSPi8LkG6zYw17av4Kmg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Theo Smith</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects"></a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero reveal">
+        <div class="container hero-content">
+            <h1 class="hero-title"></h1>
+            <p>Computer Science Student</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about reveal">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Theo Smith">
+            </div>
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    I'm Theo, a driven and versatile Computer Science graduate passionate about problem-solving, innovation, and making an impact through technology. My expertise spans data analysis, software development, and machine learning, with experience in creating scalable applications, optimizing processes, and tackling real-world challenges.
+                </p>
+                <p>
+                    I have worked with companies like Fremantle and Decideum, leading sustainability initiatives and excelling in competitive cycling. I enjoy merging technical skills with creativity and dedication to deliver outstanding results.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects reveal">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <h3>Project One</h3>
+                    <p>A data visualization tool that helps businesses understand their metrics.</p>
+                    <a href="projects/project1.html" class="btn">Learn More</a>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2.jpg" alt="Project 2">
+                    <h3>Project Two</h3>
+                    <p>An AI-powered recommendation system for sustainable products.</p>
+                    <a href="projects/project2.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog reveal">
+        <div class="container">
+            <h2>Latest Blog Posts</h2>
+            <div class="blog-grid">
+                <div class="blog-post">
+                    <h3>Understanding Machine Learning Basics</h3>
+                    <p>A beginner-friendly guide to supervised and unsupervised learning.</p>
+                    <a href="blog/blog-post-one.html" class="btn">Read More</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Data Visualization Techniques</h3>
+                    <p>How to communicate insights effectively with charts, graphs, and interactive dashboards.</p>
+                    <a href="blog/blog-post-two.html" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact reveal">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>I'd love to hear from you! Whether you have a question or want to collaborate, feel free to reach out.</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:theo.smith@example.com">theo.smith@example.com</a></li>
+                    <li><i class="fas fa-phone"></i> +44 7740 559467</li>
+                    <li><i class="fas fa-map-marker-alt"></i> London, UK</li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form" action="https://formspree.io/f/xanyzknr" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="_replyto" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div id="form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="reveal">
+        <div class="container footer-container">
+            <p>&copy; 2024 Theo Smith. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+
+        // Contact Form Submission Handling
+        const form = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const data = new URLSearchParams(formData);
+
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    form.reset();
+                    formMessage.innerHTML = '<p class="success">Thank you! Your message has been sent.</p>';
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formMessage.innerHTML = `<p class="error">${data.errors.map(error => error.message).join(', ')}</p>`;
+                        } else {
+                            formMessage.innerHTML = '<p class="error">Oops! Something went wrong.</p>';
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                formMessage.innerHTML = '<p class="error">Oops! Something went wrong.</p>';
+            });
+        });
+
+        // Scroll Reveal Animations
+        const reveals = document.querySelectorAll('.reveal');
+        const options = { threshold: 0.1 };
+        const revealOnScroll = new IntersectionObserver((entries, revealOnScroll) => {
+            entries.forEach(entry => {
+                if(!entry.isIntersecting) return;
+                entry.target.classList.add('reveal-active');
+                revealOnScroll.unobserve(entry.target);
+            });
+        }, options);
+        reveals.forEach(r => {
+            revealOnScroll.observe(r);
+        });
+
+        // Typing Animation for Hero Title
+        const heroTitle = document.querySelector('.hero-title');
+        const text = "Hello, my name is Theodoro";
+        let index = 0;
+        let removing = false;
+
+        function animateText() {
+            if (!removing) {
+                heroTitle.textContent = text.slice(0, index + 1);
+                index++;
+                if (index === text.length) {
+                    setTimeout(() => removing = true, 1000);
+                }
+            } else {
+                heroTitle.textContent = text.slice(0, index - 1);
+                index--;
+                if (index === 0) {
+                    removing = false;
+                }
+            }
+        }
+
+        setInterval(animateText, 100);
+    </script>
+</body>
+</html>

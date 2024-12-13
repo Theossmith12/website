@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project One | Theo Smith</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Typography */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-image: url('../images/background.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        p, li {
+            color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.2); /* Glassy effect */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links li a:hover {
+            color: #007BFF;
+        }
+
+        /* Section Styling */
+        .about {
+            background: rgba(255, 255, 255, 0.15); /* Glassy background */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 4rem 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .about h2 {
+            margin-bottom: 2rem;
+        }
+
+        .about ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+
+        .about ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .about a.btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .about a.btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-container p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            margin-left: 1rem;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007BFF;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">Theo Smith</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="about reveal">
+        <div class="container about-container">
+            <h2>Project One: Data Visualization Tool</h2>
+            <p>This is an interactive data dashboard built using Dash and Plotly, designed to visualize UK crime data. The dashboard allows users to filter data by crime types, outcomes, locations, and more. It also provides time-series trends and geographical visualizations.</p>
+
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Interactive dashboards</li>
+                <li>Customizable charts and filters</li>
+                <li>Real-time data updates</li>
+                <li>Responsive design</li>
+            </ul>
+
+            <p>Check out my GitHub repository for this project:</p>
+            <a href="https://github.com/Theossmith12/datadashboard" class="btn">View on GitHub</a>
+
+        </div>
+    </section>
+
+    <footer class="reveal">
+        <div class="container footer-container">
+            <p>&copy; 2024 Theo Smith. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
